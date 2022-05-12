@@ -1,0 +1,83 @@
+<!--CSS GRID LAYOUT 
+CSS Grid Layout is a two dimensional layout system for web. It lets you lay content out in rows and columns, and has many features that make building complex layouts straightforward.
+
+What is Grid Layout?
+A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements. They help us to create designs where elmeents don't jump around or change width as we move from page to page, providing greater consistency on our websites.
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
+            /*grid-template-columns: 200px 100px 200px;
+            Or
+            grid-tempelate-columns: 1fr 2fr 1fr;
+            Or
+            grid-tempelate-columns: repeat(4, 1fr);*/
+            grid-gap: 20px;
+            grid-auto-rows: 100px; /*may leads to overflow*/
+
+            grid-auto-rows: minmax(100px, auto);
+            grid-auto-columns: minmax(50px, auto);
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+
+        .items{
+            background-color: lightcoral;
+            border: 3px green solid;
+            border-radius: 3px;
+        }
+
+        #item-2{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        #item-1{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #item-3{
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+
+        .item-3-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .nested-item{
+            border: 3px greenyellow solid;
+            border-radius: 3px;
+            background-color: lightyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="item-1">Box 1</div>
+        <div class="items" id="item-2">Box 2</div>
+        <div class="items item-3-container" id="item-3">
+            <div class="nested-item">Nested Box1</div>
+            <div class="nested-item">Nested Box2</div>
+            <div class="nested-item">Nested Box3</div>
+        </div>
+        <div class="items">Box 4</div>
+        <div class="items">Box 5</div>
+    </div>
+</body>
+</html>
