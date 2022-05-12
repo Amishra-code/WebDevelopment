@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style/payment.css">
+</head>
+<body>
+    <!--
+        Elements in form : 
+
+        a.) <input> ->
+            type attribute : which type of input it has to take 
+            Syntax : type = "text" (for inoutting name)
+                     type = "password" (for inputting characters which are hidden)
+                     type = "radio" (for inputting any one option like male female or other)
+                     type = "checkbox" (for inputting multiple ticks to certain criterias)
+                     type="file" (here we can upload any file like uploading resume)
+                     type="submit" (for submitting the form / it passes information to the server)
+                     type="reset" (to erase the form in case we have inputted wrong information)
+                     type="image" (image button is used to pass information to the server whenever the user presses the image button)
+                     type="email"
+
+
+            name attribute : which number of data it is
+            Syntax : name = "firstname" (firstname = anjali)
+            value under the name attribute comes through the help of value attribute
+
+            value attribute : we have to define certain value example...male or female
+            Syntax : value = "male"
+
+            required attribute : it is used to show that the specified input field can't be left empty
+            Syntax: required
+        
+        b.)<textarea> ->
+            it is used when a large amount of information has to be taken and it has attributes row and column which specifies size of the rectangular box. example...in blog posts
+            Syntax : <textarea cols=" " rows=" ">
+
+        c.)<select>
+            it is used to provide drop down menu list
+        
+        d.)action attribute : it is used to provide the location of the server
+
+        e.)<fieldset> ->
+            used to group any input variables together (by defaukt will create a rectangular box)
+        
+        f.)<legend> ->
+            used to name the fieldset
+
+
+    -->
+
+    <form action=""></form>
+    <h1 class="main_heading">Payment Form</h1>
+    <h2>Contact Information</h2>
+    
+    <p>*Name: <input type="text" name="name" placeholder="Anjali Mishra" required></p>
+    
+    <p>
+        <fieldset>
+            <legend>Gender</legend>
+            Male <input type="radio" name="gender" id="male">
+            Female <input type="radio" name="gender" id="female">
+        </fieldset>
+    </p>
+
+    <p>Address:<textarea name="address" id="address" cols="100" rows="5" placeholder="house number, city"></textarea></p>
+
+    <p>Email: <input type="email" name="email" id="email" placeholder="you@you.com"></p>
+
+    <p>Pincode <input type="number"  name="pincode" id="pincode" placeholder="123456"></p>
+
+
+    <h2>Payment Information</h2>
+    
+    <p>Card Type:
+        <select name="card_type" id="card_type">
+            <option value="">--Select a Card Type--</option>
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="mastercard">MasterCard</option>
+        </select>
+    </p>
+
+    <p>Card Number: <input type="number" name="card_number" id="card_number" placeholder="1111-2222-3333-4444"></p>
+
+    <p>Expiration Date: <input type="date" name="exp_date" id="exp_id" placeholder="dd/mm/yyyy"></p>
+
+    <p>CVV <input type="password"  name="cvv" id="cvv" placeholder="123"></p>
+    <input  type="submit" value="Pay Now">
+</body>
+</html>
