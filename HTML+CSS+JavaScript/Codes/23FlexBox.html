@@ -1,0 +1,140 @@
+<!--FlexBox->
+    CSS flexbox layout allows you to easily format HTML. FlexBox makes it simple to align items vertically and horizontally using rows and columns. Items will "flex" to different sizes to fill the space. It makes responsive design easier.
+
+    Why FlexBox?
+    i)Vertically centering a blck of content inside its parent.
+    ii)Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.
+    iii)Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content.
+
+    Terminologies
+    i)main-axis : The main axis of a flex container is the primary axis along which flex items are laid out. The direction is based on the flex-direction property.
+
+    ii)main-start | main-end : The flex items are placed within the container starting on the main-start side and going toward the main-end side.
+
+    iii) main size : The width or height of a flex container or flex item, whichever is in the main dimension, is that box's main size. Its main property is thus either its width or height property, whichever is in the main direction.
+
+    iv) cross axis : The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction.
+
+    v) cross-start | cross-end : Flex lines are filled with items and placed into container starting on the cross-start side of flex container and going toward the cross-end side.
+
+    vi) cross size : The width or height of a flex item, whichever is in the cross dimension, is the item's cross size. The cross size property is whichever of 'width' or 'height' that is in the cross dimension.
+
+    Flex Propeties : 
+
+    i)Display Flex 
+    Syntax -> display: flex;
+              display: block;
+    
+    ii)Flex Direction
+       It determines how the behavour of elements will work
+       Syntax -> flex-direction: column;
+                 flex-direction: column-reverse;
+                 flex-direction: row;
+                 flex-direction: row-reverse;
+    
+    iii)Justify Content
+        Items get align along the main axis.
+        Synatx -> justify-content: center;
+                  justify-center: space-between;
+                  justify-content: space-around;
+                  justify-content: flex-start;
+                  justify-content: space-between;
+
+    iv)Flex Align Items
+       Items get align along the cross axis.
+       Syntax -> align-items: flex-start;
+                 align-items: flex-end;
+                 align-items: center;
+                 align-items: stretch;
+                 align-items: baseline;
+    
+    v)Align Self
+      Syntax -> align-self: stretch;
+                align-self: flex-start;
+                align-self: flex-end;
+                align-self: center;
+                align-self: baseline;
+
+    Shorthand Properties :
+
+    i)flex: <flex-grow><flex-shrink> || <flex-basis (in px)>
+
+    ii) flex-flow: <flex-direction> || <flex-wrap>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            padding: 0 20px 30px 0;
+            line-height: 1.4;
+        }    
+     
+        .flex-container{
+            display: flex;
+            width: 100%;
+            height: 500px;
+            border: 2px slateblue solid;
+            flex-direction: column-reverse;
+            flex-wrap: wrap; /*if we lower the size of the screen, then box size will not change but they will shift to the next line [for 'nowrap' value-> box size will get smaller]*/
+            align-content: flex-end; /*cross-axis propert*/
+        }
+
+        .flex-item{
+            width: 75px;
+            height: 75px;
+            background-color: lightskyblue;
+            border: 2px solid darkblue;
+            text-align: center;
+            font-size: 2em;
+            color: white;
+            font-weight: bold;
+            line-height: 1.4;  
+        }
+
+        #flex-item-1{
+            align-self: center; /*for cross-axis*/
+            flex-basis: 200px; /*maximum width*/
+            flex-grow: 2; /*relatively this box's size will be large*/
+            background-color: lightpink;
+        }
+
+        #flex-item-2{
+            background-color: lightskyblue;
+        }
+
+        #flex-item-3{
+            background-color: lightgreen;
+            order: 5; /*The element will get shifted to location 5*/
+        }
+
+        #flex-item-4{
+            background-color: darkkhaki;
+        }
+
+        #flex-item-5{
+            background-color: lightcoral;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item" id="flex-item-1">1</div>
+        <div class="flex-item" id="flex-item-2">2</div>
+        <div class="flex-item" id="flex-item-3">3</div>
+        <div class="flex-item" id="flex-item-4">4</div>
+        <div class="flex-item" id="flex-item-5">5</div>
+    </div>
+</body>
+</html>
