@@ -1,0 +1,65 @@
+<!--In css, every element is a box element, so if we provide size of a box to be 200X200 and contents in it are of 500px, this situation is overflow
+
+    PROPERTIES FOR CONTROLLING OVERFLOW
+    overflow: hidden/scroll/auto(like scroll but if we increase the size of the box, it will not let the word scroll)/visible(by default);
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 200px;
+            height: 100px;
+            /*These properties will lead to overflow*/
+        }
+
+        .word{
+            border: 3px solid black;
+            font-size: 200%;
+            width: 80%;
+            overflow: scroll;
+        }
+
+        /*
+        .word{
+            border: 3px solid black;
+            font-size: 200%;
+            width: 80%;
+        }*/
+
+        .img{
+            width: 100px;
+            height: 100px;
+            border: 4px solid black;
+            margin: 10px;
+        }
+        
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+    <br><br>
+    <div class="word">Overflow</div>
+    </br></br>
+
+    <p>This content is outside of the box.</p>
+
+    <div class="wrapper">
+        <div class="img"><imp src="image/star.jpg" alt="star"></imp></div>
+        <div class="img"><img src="image/balloon.jpg" alt="balloon"></div>
+    </div>
+</body>
+</html>
