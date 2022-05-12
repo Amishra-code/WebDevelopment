@@ -1,0 +1,102 @@
+<!--
+    STRUCTURE OF A WEBSITE
+
+    There are two types of tags : 
+    a.)Semantic tags
+    b.)Non-Semantic tags
+
+    a.)SEMANTIC TAGS : 
+     Tags which clearly defines contents
+     e.g: <h1>, <h6>, <Nav>
+     Following are the semantic tags described below-
+
+    1.<header> ->
+        contains logo, heading, tagline
+
+    2.<Nav> ->
+        contains menu, used to show the navigation information of webpage
+    
+    3.<main>
+        this is the main area of the web page and consists of subsections and comes under the body tag
+
+    4.<article> ->
+        used to create blog.
+    
+    5.<section> ->
+        contains single piece of functionality.
+    
+    6.<aside> ->
+        related videos which comes under the web page on a side like you tube videos or any adds comes under the aside tag.
+
+    7.<footer> ->
+        this is used at the end of the web page and we usually put the copyright, contact info in this footer tag.
+    
+
+    Some tags in the semnatic tags tells nothing about the content
+    
+    i)<div> : used to group some contents like grouping 2 or three paragraphs.
+    Div is block level element.
+    e.g: if we want to change the background color of 3 paragraphs so rather than changing the color for each para, we will group those paras using the <div> and will change the color 
+
+    ii)<Span> : Soan is inline level element
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni Kaksha | Home</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Apni Kaksha</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">College Reviews</a>
+        <a href="#">Courses</a>
+        <a href="#">Study Materials</a>
+        <a href="#">Login/SignUp</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Courses</h2> 
+            <video src="video/video1.mp4" width="40%" height="315" poster="image/img.jpg" controls loop muted></video>
+            <video src="video/video2.mp4" width="40%" height="315" controls loop muted></video>
+        </section>
+
+        <section>
+            <h2>College Reviews</h2>
+            <iframe width="40%" height="315" src="https://www.youtube.com/embed/1VfqlKtVF7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="40%" height="315" src="https://www.youtube.com/embed/jMi0SUvCtwI" title="YouTube videoplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h2>Study Material</h2>
+            <a target="_blank"  href="Notes/Name.txt" ><img src="Notes/image_notes.jpg" widht="24%"></a>
+        </section>
+
+        <section>
+            <h2>Our Founder</h2>
+            <img src="Notes/aman_shattarwal.jpg" width="33%" height="315" alt="This is aman dhattarwal">
+            <h3>Aman dhattarwal</h3>
+            <a href="https://www.youtube.com/channel/UCF7BExjT2zH_mmyqOB139Dg" target="_blank">You Tube</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://in.linkedin.com/in/dhattarwalaman" target="_blank">LinkedIn</a>
+            <h4>Young TEDx speaker and #1 Online JEE Educator | Founder of 5 YouTube Channels with 2.5 million young hustlers.</h4>
+            <h5>I help students across India find their right career path. I have been a guest speaker at 22 Colleges including Top IITs, BITS Pilani, IIIT's, NIT's, SRCC, Jadavpur University etc. I am the #1 Educator of JEE on India's biggest online platform and I believe that everyone has the right to quality education and with the help of my social media platforms, I have helped millions of students find their path to success in the last 5 years. In the next few decades, India will rise as the leader of the world with the maximum young workforce, but for this, we need some good pilots who can take us through this. I help these young hustlers find their true potential so that they can fly us to victory.</h5>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+    </footer>
+</body>
+</html>
