@@ -1,0 +1,134 @@
+<!--Properties in CSS : 
+    TEXT-ALIGN: to align the text
+    Syntax -> text-align : left;
+              text-align : center;
+              text-align : right;
+              text-align : justify;
+
+    TEXT COLOR: we use color attribute
+    Syntax -> color : rebeccapurple;
+              color : #00ff00;
+              color : rgb(214, 122, 127);
+              color : hsl(30, 100%, 50%);
+              color : intial;
+
+    TEXT-DECORATION ::for decorating the text(e.g: underline, overline....)
+    Syntax -> text-decoration : overline;
+              text-decoration : line-through;
+              text-decoration : underline;
+              text-decoration : underline overline;
+
+    TEXT-TRANSFORM
+    Syntax -> text-transform : capitalize;
+              text-transform : uppercase:
+              text-transform : lowercase;
+              text-transform : none;
+              text-transform : full-width;
+
+    TEXT-INDENT
+    Syntax -> text-indent : 0;
+              text-indent : 30%;
+              text-indent : -3em;
+
+    LINE-HEIGHT
+
+    LETTER-SPACING
+    Syntax : letter-spacing: normal;
+             letter-spacing : .2rem;
+             letter-spacing : 1px;
+             letter-spacing : -1px;    
+
+    WORD-SPACING
+    Syntax : word-spacing : normal;
+             word-spacing : 1rem;
+             word-spacing : 4px;
+             word-spacing : 120%;
+             word-spacing : -.4ch;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling text in CSS</title>
+    <style>
+        p{
+            color: red;
+            line-height: 2; /*space between paragraphs (unitless values : use this number multiplied by the element's font size*/
+            font-weight: 800;
+            text-indent : 100px;
+            word-spacing: 1.5ch;
+            
+        }
+        
+        h1{
+            text-transform: uppercase;
+            text-decoration : underline;
+            text-shadow : 1px 1px 2px black; /* offset-x | offset-y | blur-radius | color*/
+            text-align : center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>The Night King.</h1>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aperiam magni animi, quos placeat blanditiis similique, molestias molestiae porro maxime facilis eius quisquam provident corrupti! Rem perferendis libero ullam at.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium natus soluta, quaerat, rerum consectetur delectus iusto, labore enim commodi molestias autem nihil! Nemo sequi modi repellendus provident explicabo quae expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora cumque consequuntur ducimus modi. Nisi, tempora quidem quas cumque corporis rerum aspernatur non cupiditate accusamus quam voluptatum eaque quis ab obcaecati.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eaque excepturi expedita? Dicta neque voluptas, libero autem nobis accusantium! Impedit culpa consequuntur facere. Mollitia, amet error. Voluptatem, magnam maiores! Aut?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro doloribus deleniti aut dolor impedit alias placeat, labore animi inventore nemo error omnis vitae rem ratione tempore amet itaque exercitationem et?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cupiditate commodi nisi animi similique distinctio dicta corrupti tempora eveniet, consequuntur maxime sequi, labore, maiores at doloremque asperiores impedit molestiae porro.</p>
+</body>
+</html>
+
+
+<!--Shorthand Property
+    used to write multiple values in a property
+    saves time and energy
+    makes our code easy to read
+    example : background, font, margin etc.
+    
+
+    Syntax :  #BACKGROUND
+              background-color: #000;
+              background-image: url("css.jpg");
+              background-repeat: no-repeat;
+              background-position : left top;
+              
+              SHORTHAND->
+              background : #000 url(css.jp) no-repeat left top;
+
+
+              #FONT
+              font-style : italic;
+              font-weight : bold;
+              font-size : .8em;
+              line-height : 1.2;
+              font-family : Arial, sans-serif;
+
+              SHORTHAND-> 
+              font : italic bold .8em/1.2Arial, sans-serif;
+
+
+              #BORDER
+              border-width : 1px;
+              border-style : solid;
+              border-color : #000;
+ 
+              SHORTHAND->
+              border : 1px solid #000;
+
+
+              #MARGIN/PADDING  
+              margin-top : 10px;
+              margin-right : 5px;
+              margin-bottom : 10px;
+              margin-left : 5px;
+
+              SGORTHAND->
+              margin : 10px 5px 10px 5px;
+
+-->
