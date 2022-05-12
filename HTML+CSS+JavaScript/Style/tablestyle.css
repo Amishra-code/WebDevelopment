@@ -1,0 +1,30 @@
+/*Table border properties:
+  
+  table, th, td (these are selectors)
+    border: 1px solid black;
+    border-collapse: collapse; (cells separating with the help of single line)
+    border-collapse: separate; (cells separating with the help of two borders-> pipe like)
+
+    th, td{
+        padding : 15px;
+    }
+
+    border-spacing: 0;
+    border-spacing: 5pxlrem;
+*/
+
+table, th, tr, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    border-spacing: 5px;
+
+}
+
+th{
+    background-color: coral;
+}
+
+td{
+    background-color: cornflowerblue;
+}
