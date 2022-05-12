@@ -1,0 +1,36 @@
+<!--IMPORTANT KEYWORD
+    
+    h1{
+        color: blue; (0,0,0,1)
+    }
+
+    .heading{
+        color: green; (0,0,1,0)
+    }
+
+    #header{
+        color: red; (0,1,0,0)
+    }
+
+    h1{
+        color: black !important; [Due to important keyword, it's specificity increases and became (1,0,0,0) -> thousand]
+    }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .important{
+            color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    <p class="important" style="color: red;"> This is red color</p>
+</body>
+</html>
