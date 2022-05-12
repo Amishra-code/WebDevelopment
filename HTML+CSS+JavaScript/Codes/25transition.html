@@ -1,0 +1,101 @@
+<!--Transitions : 
+    In hover, color changes instantly, but in transition, color changes slowly and gradually
+
+    transition property:
+    It is a shorthand property.
+
+    Property Name                 Time                 Easing-Function                     Delay
+          |                         |                        |                               |
+     margin-name                    2s                   ease-out                           2s
+          |                         |                        |                               |
+    transition-property     transition-duration      transition-timing-funtion         transition-delay
+
+
+    Transition-timing-function: ease-in;
+    The transition starts slowly, and accelerates gradually until the end.
+
+    Transition-timing-funxtion: ease-in-out;
+    The transition starts quickly, and accelerates gradually until the end.
+
+    Transition-timing-function: linear;
+    The transition has a "constant speed"
+
+    ANIMATION PROPERTY
+    ->Style
+    ->Keyframe
+
+    //Shorthand Property
+    animation: 3s
+    ->Sub Property
+    animation-name: name_of_animation;
+
+    //Shorthand Property
+    animation:750ms;
+    ->Sub Property
+    animation-duration: 750ms; 
+
+    //Shorthand Property
+    animation: 750ms linear;
+    ->Sub Prperty
+    animation-timing-function: linear;
+
+    //Shorthand Property
+    animation: 750ms linear 250ms;
+    ->Sub Property
+    animation-delay: 250ms;
+
+    //Shorthand Property
+    animation: 750ms linear 250ms 2;
+    ->Sub property
+    animation-iteration-count: 2;
+
+    //Shorthand property
+    animation: 750ms linear 250ms 2 reverse;
+    ->Sub property
+    animation-direction: reverse;
+
+    //Shorthand Property
+    animation: 750ms linear 250ms 2 reverse forwards;
+    ->Sub Property
+    animation-fill-mode: forwards;
+
+    //Shorthand Property
+    animation: 750ms linear 250ms 2 reverse forwards paused;
+    ->Sub Property
+    animation-play-state: paused;
+
+    @keyframe name_of_animation{
+        0% {margin-left: 20%;}
+        100% {margin-left: 100%;}
+    }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+
+        .circle{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 4s, border-radius 4s, background 4s; /*whenever we will hover on this box, width will change to 300px and time taken would be 2s*/
+        }
+
+        .circle:hover{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>
