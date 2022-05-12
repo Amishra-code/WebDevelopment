@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/tablestyle.css">
+    <style>
+        h1{
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    
+   <!--
+       Browser ignores white space and for that purpose, we use entities
+       
+        Entities : display reserved characters in HTML
+        e.g: to display <h1> we can use entities
+             for right arrow > we use &lt;
+             for left arrow < we use &gt;
+    
+             used to diplay
+             a.)reserved characters 
+             b.)special characters 
+             c.)emojis
+             d.)symbols
+    
+            SYNTAX 
+            a.)&entity_name; 
+            OR 
+            b.)&#entity_number;
+    -->
+   <h1>Welcome to Web Development &lt;&Backslash;h1&gt;</h1>
+   
+   <hr> <!--Horizontal rule-->
+   <p>My name is Anjali Mishra, pursuing B.Tech from in Graphic Era University. I belong to meerut but has been shifted to dehradun for higher studies. </p>
+   
+   <!--
+       Lorem : 
+       It is a keyword used to display random swet of strings.
+       Syntax : LoremNumberOfStrings
+
+       <b></b> : Bold tag
+       <strong></strong> : similar to Bold tag
+
+       <i></i> : italic tag
+       <em></em> : emphasize tag, similar to italic
+
+       <small></small> : use to make the font size smaller for a specific length of strings
+   -->
+   <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptatem reiciendis.</b> <strong>Nesciunt, dolor nulla! Aliquid porro aut totam assumenda aperiam ad nobis, laborum, doloremque ex a veniam eligendi magni provident.</strong> <i>mollitia natus, expedita in sequi beatae suscipit soluta rerum temporibus necessitatibus libero saepe architecto asperiores facere perspiciatis debitis reiciendis aliquam eius, distinctio porro ab corrupti tempora, ipsam maiores!</i> <em>Non repudiandae saepe veniam!</em> <small>Omnis, non illo repellat illum minima alias dolorem sapiente delectus deserunt libero, autem, nam nemo natus facilis odio!</small> Temporibus consequuntur explicabo at debitis autem ea laboriosam optio deleniti. Dicta ullam, aliquam perspiciatis est animi excepturi pariatur ex.</p>
+   </hr>
+   
+   <p>10<sup>2</sup>
+   <br>10<sub>2</sub></p>
+
+
+   <h2>Shopping List</h2>
+   <hr>
+   <!--
+       List : Lists are used to create menu in the naviagtion tab of a webpage
+       List are of 3 types ->
+       a.) ordered list        <ol></ol> 
+       b.) description list    
+       c.) unordered list      <ul></ul>
+
+       These lists will contain items where <li></li> tags are used.
+       <li> stands for list item
+    -->
+
+   <ul>
+       <li>Milk</li>
+       <li>Vegetables</li>
+       <li>cereal</li>
+   </ul>
+
+   <ol type="I">
+       <li>Jeans</li>
+           <ul>
+               <li>H&M</li>
+               <li>Red Tape</li>
+           </ul>
+       <li>Tops</li>
+       <li>Shrug</li>
+   </ol>
+   </hr>
+
+   <hr>
+   <h2>Links</h2>
+   
+   <!-- 
+        Links : 
+        We use anchor tag <a> top create a hyperlink
+        <a href = "http://www.google.com">
+        URL : Uniform Resource Locator
+        
+        URL are of two types ->
+        a.) Absolute URL : from start to destination
+        b.) Relative URL : from current to destination
+
+        For moving into a file location, there possibly have 3 cases : 
+        1. moving into the folders :
+           Goal : index.html to main.CSS
+                  here, index.html->current file
+                        main.CSS->target file
+           URL : "/CSS/main.CSS"
+                   CSS-> folder name
+                   main.CSS->target file
+                   
+                   
+        2. files in the same folder :
+           Goal = index.html to plesiosaurs.html
+                  here, index.html->current file
+                        plesiosaurs.html->target file
+                  
+                  name of the target file->
+                  URL : "plesiosaurs.html"
+                         OR
+                         "./plesiosaurs.html"
+
+
+        3. moving out of the folders :
+           ../ -> used to go outside a folder
+           e.g: ../../ (out of 2 folders)
+                ../../../ (out of 3 folders)
+                ../../../../ (out of 4 folders)
+           Goal = apatosaurs.html to pterosaurs.html
+                  here, apatosaurs.html->current file
+                        pterosaurs.html->target file
+                  URL : "../pterosaurs.html"
+                         ../ -> to move out of the folder
+                         pterosaurs.html -> file name
+           
+    -->
+   
+    <!--a.)Absolute URL-->
+   <!--This link will open on the same tab.-->
+   <a href="https://www.google.com">Google</a> 
+   
+   <!--For opening a hyperlink in a new tab
+       We use target attribute with value "_blank"
+       Syntax : target="_blank"
+    -->
+    <br>
+    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+    </br>
+
+    <hr>
+    <!--Relative URL-->
+    <br>
+    <a href="WebDevPage2.html">Page2</a>
+    </br>
+    </hr>
+
+    <hr>
+    <br>
+    <a href="https://www.google.com/search?q=images&rlz=1C1CHWL_enIN987IN987&sxsrf=ALiCzsbYNecaWOuhLfkHfW8lRKkHZ7NMvA:1651593367521&source=lnms&tbm=isch&sa=X&ved=2ahUKEwin6e_f2MP3AhUC63MBHSqEDLIQ_AUoAXoECAEQAw&biw=1280&bih=569&dpr=1.5" target="_blank"><h2>Images</h2></a>
+   </br>
+   </hr>
+   
+   <hr><br>
+   <!--Relative hyperlink-->
+   <a href="Notes/Name.txt" target="_blank">Notes</a>
+   </br></hr>
+   </hr>
+
+   <h2>Inline and Block</h2>
+   <hr>
+   <!--
+       <p> tag is block level
+       <em> is inline
+   -->
+   <p>This is the first para</p>
+   <p>This is the second para</p>
+   <p>This is the third para</p>
+   <em>This is an em tag.</em>
+   <em>em is used to emphasize text.</em>
+
+   <h2>Image</h2>
+   <hr>
+   <!--img<> uses src attribute for fetching image's location
+   
+   alt attribute : alternative text dsiplays when any kind of fault occurs with image
+    
+   widht attribute : to set width of image
+   height : to set height of image
+
+   it is recommended to only set wither height or width so that it gets balanced
+   -->
+   <img src="image/img.jpg" alt="This is an image" widht="350" height="">
+   </hr>
+
+
+   <h2>Video</h2><hr>
+   <!--
+       autoplay attribute : it is used to autoplay the audio whenever the user visits the web page
+
+       control attribute : it is used to control the play button for any video
+
+       loop muted attribute : it is used to mute the volume of a video by default and the user can adjust the volume accordingly
+
+       poster attribute : it is used to add thumbnail to a video
+   -->
+   <video src="video/video1.mp4" width="350" height="350" autoplay></video>
+   <video src="video/video2.mp4"  width="350" height="350" controls loop muted poster="image/img.jpg"></video>
+   </hr>
+   
+   <h2>iframe tag</h2><hr>
+   <!--
+       This tag is used to add any other web page in our web page
+       e.g: youtube video 
+            www.apnikaksha.com
+
+       frameborder : it provides border to the video
+
+       allowfullscree attribute : it provides the option to watch video in the full screen mode
+   -->
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/l1EssrLxt7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <br>
+   <iframe src="https://www.merriam-webster.com/dictionary/this" frameborder="0" width="560" height="600"></iframe>
+   </hr>
+   <br></br>
+
+   <h2>STUDENT MARKS</h2>
+
+   <!--
+       <thead> : headings in the top of table
+       <th> : table head in each row
+       <tr> : table row
+       <td> : table data
+       
+       <tfoot> : headings in the top of table
+           colspan attribute = "total number of columns get merged" : it is an attribute which is used to merge value of something for each]] columns 
+   -->
+   <hr>
+   <table>
+       
+       <thead>
+           <tr>
+               <th>Subject</th>
+               <th>Theory</th>
+               <th>Practical</th>
+               <th>Total Marks</th>
+               <th>Grade</th>
+           </tr>
+       </thead>
+       
+       <tbody>
+           
+            <tr>
+               <td>English</td>
+               <td>75</td>
+               <td>-</td>
+               <td>75</td>
+               <td>B1</td>
+           </tr>
+
+           <tr>
+               <td>Maths</td>
+               <td>77</td>
+               <td>-</td>
+               <td>77</td>
+               <td>B1</td>
+           </tr>
+
+           <tr>
+               <td>Physics</td>
+               <td>53</td>
+               <td>17</td>
+               <td>70</td>
+               <td>B2</td>
+           </tr>
+
+           <tr>
+            <td>Chemistry</td>
+            <td>48</td>
+            <td>21</td>
+            <td>69</td>
+            <td>B2</td>
+           </tr>
+
+       </tbody>
+       <tfoot>
+           <th colspan="5">Result : Pass</th>
+       </tfoot>
+   </table>
+</hr>
+   
+</body>
+</html>
