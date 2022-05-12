@@ -1,0 +1,62 @@
+<!--Units in CSS
+    A CSS unit determines the size of a property you are setting for an element or its content.
+    
+    Units are of two types : 
+   
+    I.Relative->
+    Relative length units are relative to something else. perhaps the size of the parent element's font, or size of the viewport.
+    % : Relative to the parent element
+    em : Relative to the font-size of the element (2em means 2 times the size of the current font)
+    rem : Font size of the root element
+    vw : Relative to 1% of the width of the viewpoint*
+    vh : Relative to 1% of the height of the viewport*
+    vmin : 1% of the viewport's smaller dimension*
+    vmax : 1% of the viewport's larger dimension
+
+    II.Absolute->
+       Absolute units are fixed and they are not relative to anything else, and are generally considered to always be the same size.
+       cm : 1cm = 96px/2.54
+       mm : milimeteres
+       in : inches (1 in = 96px = 2.54cm)
+       pt : points(1pt = 1/72 of 1 in)
+       pt : pixels(1 px = 1/96th of 1 in)
+       pc : picas(1 oc = 12 pt) 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        body{
+            font-family : 'Fira Code', monospace;
+            font-size: 45px;
+        }
+
+        div{
+            box-sizing: border-box;
+            color: black;
+            margin-bottom: 4px;
+            padding: 4px;
+            width: 400px;
+        }
+
+        .percent{
+            font-size: 200%;  /*font-size is normally 16px of which 200% is here*/
+        }
+
+        .em{
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="percent">font-size: 200%</div>
+    <div class="em">font-size: 1em</div>
+    <div class="rem">font-size: 1rem</div>
+</body>
+</html>
