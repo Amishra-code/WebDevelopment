@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 1em;
+        }
+
+       /* @media screen and (max-width: 600) [when content will reach to a maximum width of 600, it will regain it's default color] {
+            body{
+                color: red;
+            }
+        }*/
+
+        @media (orientation: landscape) {
+            body{
+                color: rebeccapurple;
+            }
+        }
+
+        /*We can also combine media queries*/
+
+        @media screen and (max-width: 600px) and (orientation: landscape) {
+            body{
+                color: blue;
+            }
+        }
+
+        @media screen and  (max-width: 600px), screen and (orientation: landscape){
+            body{
+                color: blue;
+            }
+        }
+
+        @media not all and (orientation: landscape){
+            body{
+                color: blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo in recusandae possimus eos odio voluptatibus nihil, nam iste accusantium animi molestiae cum sunt assumenda ipsa numquam saepe doloribus aspernatur quidem!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ratione, fugiat blanditiis consequatur architecto, fuga sit omnis possimus excepturi ipsum eveniet laborum libero. Alias ipsum, pariatur natus modi odit dicta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error quisquam iusto possimus ipsum, labore necessitatibus ut pariatur doloremque fugiat. Maxime molestiae accusamus eos culpa iste ipsam. Unde, quis modi!</p>
+</body>
+</html>
