@@ -1,0 +1,234 @@
+<!--
+    JAVASCRIPT
+    ->Case sensitive
+    ->in single line of code, ';' is not mandatory
+    ->in multiline statement, ';' is mandatory 
+    ->Dynamically Typed language
+      e.g: var number = 12;  //int
+           var name = "Anjali";  //String
+
+    Data Types ->
+    
+    i)Primitive
+
+      -> Boolean : A javascript boolean represents one of two values: true or false.
+      var YES = true;
+      var NO = false;
+      
+      ->Undefined : A variable has an undefined value when no value is assigned before using it. So you can say that undefined means lack of value or unknown value.
+      e.g: vare myVar;
+           alert(myVar); //undefined
+    
+     ->String : A string is textual content. It must be enclosed in single or double quotation marks.
+     e.g: var str1 = "Hello World";
+
+     ->null : You can assign null to a variable to denote that currently that variable does not have any value to it but it will have later on. A null means absence of a value.
+     e.g: var myVar = null;
+          alert(myVar); //null
+
+     ->Number : Number type represents integer, float, hexadecimal, octal or exponential value.
+     e.g: var int = 100;
+          var float = 100.5;
+          var hex = 0xfff;
+          var exponential = 2.56e3;
+          var octal = 030;
+
+
+    ii)User Defined
+      
+      ->Object : It is like any other variable, the only difference is that an object holds multiple values in terms of properties and methods. Properties can hold values of primitive data types and methods are functions.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Data Typpes</title>
+</head>
+<body>
+     <h1>Uisng DataTypes</h1>
+     <script>
+          var bool = true;
+          console.log(typeof bool);
+          var number = 5;
+          console.log(typeof number);
+          var string = "name";
+          console.log(typeof string);
+          var nullvalue = null;
+          console.log(typeof nullvalue);
+          var variable;
+          console.log(typeof variable); //undefined
+          var bigint = 12345678910n;
+          console.log(typeof bigint); //bigint
+
+          //Nmaing of variables
+
+          //Camel case
+          let firstName = "Anjali";
+          //PascalCase
+          let LastName = "Mishra";
+          //SnakeCase
+          let middle_name = "Nothing";
+
+          //Using Constant (const keyword)
+          var courseName = "JAVA DS/ Algo Course";
+
+          //Card Number (Number)
+          var cardNumber = "1234567890";
+
+          //Payment Status
+          var isPaid = true;
+
+          //Declaring a Variable
+          var modeOfPaymnet;
+
+          //Taking Input from User
+          modeOfPaymnet = prompt("Mode of payment ? ");
+          alert(firstName + " successfully bought " + courseName + " using " + modeOfPaymnet);
+
+          //Operators
+
+          //Remainder assignment
+          var x = 52;
+          var y =10;
+          x = x%y;
+          console.log(x);
+
+          //Exponentiation assignment
+          var a = 10;
+          var b = 2;
+          a = a**b;
+          console.log(a);
+
+          //Comparision operator
+          var x = 3 == 3;
+          console.log(x); //true
+
+          var y = 2 == '2';
+          console.log(y); //false
+
+          //Increament Operator
+          var x = 7;
+          x++; 
+          console.log(x); //x = 8
+
+          //Unary 
+          var x = 7;
+          x  = -x;
+          console.log(x); // x = -7
+
+          var x = "7";
+          x = +x;
+          console.log(x); // x = 7(Number)
+
+          //Conditional Statement
+          var x = prompt("Enter time");
+          if(x<5)
+          {
+               alert("Good Morning");
+          }
+
+          else if(x>6)
+          {
+               alert("Good evening");
+          }
+
+          //Switch statement
+          var fruitType = prompt("Enter fruit type");
+          switch(fruitType){
+               case 'Orange' : console.log("Orange price : 60");
+               break;
+               case 'Apple' : console.log("Apple price : 80");
+               break;
+               case 'Banana' : console.log("Brange price : 40");
+               break;
+               default: console.log(`${fruitType} is invalid`);
+               break;
+
+          }
+          console.log("Do you need anything else ?");
+
+          //Loops
+          //There are 5 types of loops in JavaScript
+
+          //i)for loop
+          for(let i=0; i<10; i++){
+               console.log("Hello World!!");
+          }
+
+          //ii)do...while loop
+             let j=10;
+             do{
+                  console.log("Hello World!!");
+                  j++;
+             }while(j<10)
+
+          //iii)while statement
+              let i=10;
+              while(i>=0){
+                   console.log("Hello World!!");
+                   i--;
+              }
+
+          //iv)for...in loop
+             //object
+             let animal = {
+                  name : "zebra",
+                  leg = 4
+             };
+             for(let key in animal){
+                  console.log(key); // name '\n' leg
+                  console.log(key, animal[key]); // name zebra '\n' leg 4
+             }
+
+             let names = ["Anjali", "Niyati", "Aryan"];
+             for(let index in names){
+                  console.log(index, names[index]); // 0 Anjali '\n' 1 Niyati '\n' 2 Aryan
+             }
+
+          //v)for...of loop
+          for(let name of names){
+               console.log(name); // Anjali '\n' Niyati '\n' Aryan
+          }
+
+          //Functions
+          //A script which we use again and again
+          function greet(){
+               //code
+          }
+          greet(); //function call
+          //code
+
+          function cookNoodles(noodles, water, utensil){
+               let noodles = "Your noodles will get ready in " + noodles*2 + " minutes and ingredients used are : "+ noodles + "noodles " + water + " cups of water" + " using " + utensil;
+          }
+
+          let vegNoodles=cookNoodles(4, 8, 1);
+          console.log(vegNoodles);
+
+          //Strings
+          //Pieces of text are called String in programming
+          let hello = "hello !";
+          let welcome = "\"Welcome to JavaScript Programming\"";
+          let outputMessage = hello+welcome;
+          console.log(outputMessage);
+          let output = "Anjali " + 19;
+          console.log(output); //Anjali 19
+          let numberString = "123";
+          console.log(Number(numberString)); //123
+          console.log(numberString.toString()); //"123"
+          outputMessage = hello + welcome + " your score is " + numberString;
+          console.log(outputMessage);
+          console.log(`${hello+welcome} your score is  ${numberString}`);
+
+          //var str = "anjalimishra";
+          //str.length;
+          //str.indexOf("anjali");
+          //str.slice(5,7); ->substring
+          //str.toUpperCase();
+
+     </script>
+</body>
+</html>
