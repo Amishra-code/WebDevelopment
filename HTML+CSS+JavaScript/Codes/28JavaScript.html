@@ -229,6 +229,45 @@
           //str.slice(5,7); ->substring
           //str.toUpperCase();
 
+          //Objects
+          let bird = {
+               name: "peacock",
+               legs: 4
+          };
+          //Dot notation
+          console.log(bird.name);
+          console.log(bird.legs);
+          
+          //Bracket Notation
+          let legsProp = "legs";
+          console.log(animal[legs]); //4
+
+          //Array
+          let selectBooks = ["The Rudest Book ever", "Think and Grow Rich", "Invisible Man"];
+          console.log(selectBooks);
+
+          //Type conversion
+          /*Conversion takes place in these three data types:
+          i)String
+          ii)Boolean
+          iii)Number*/
+
+          const value1 = '5';
+          const value2 = 9;
+          //->Implicit Conversion
+          let sum = value1+value2;
+          console.log(sum); //59
+          
+
+          //->Explicit Conversion
+          sum = Number(value1) + value2;
+          console.log(sum); //14
+
+          console.log(String(123)); //explicit
+          console.log(123+''); //implicit
+
+          /*Note : In boolean datatype, if we convert a userdefined data type to boolean, it will always result in true*/
+
      </script>
 </body>
 </html>
