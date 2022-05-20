@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body id="body">
+    <ul id="element" data="valid"> <!--If we provide id to any element, it becomes a global variable-->
+        <li class="list-item">First element</li>
+        <li class="list-item">Second element</li>
+        <li class="list-item">Third element</li>
+    </ul>
+
+    <div id="firstDiv" class="allDivs">First Div</div>
+    <script>
+        const allDivs = document.getElementsByClassName("allDivs"); //getElementsByClassName : this is live as the output varies according to the new generated selectors
+        console.log(allDivs);
+    </script>
+    <div class="allDivs">Second Div</div>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table>
+<script>
+    /*//Root Node
+    console.log(document.documentElement); //Window global variable
+    console.log(document.body);
+    console.log(document.body);
+    console.log(document.head);
+
+    //Children
+    console.log(document.body.childNodes);
+    console.log(document.body.children);
+    console.log(doucment.body.firstElementChild);
+    console.log(document.body.lastChild);
+
+    //Converting to array
+    const ChildrenOfBody = Array.from(document.body.childNodes);
+    console.log(ChildrenOfBody);
+
+    //Siblings
+    const ulTag = document.body.children[0];
+    console.log(ulTag.nextElementSibling);
+    const firstLi = ulTag.children[0];
+    sceondLi = ulTag.children[1];
+    console.log(second.previousElementSibling.textContent);*/
+
+    //Table DOM Manipulation
+    const tableTag = document.body.children[1]
+    console.log(tableTag.tBodies[0].rows); //tr tr
+    /*console.log(tableTag.tBodies[0].cells[1].textContent); //Two
+    console.log(tableTag.rows);*/
+    console.log(tableTag.tBodies[0].rows[0].cells[1].style="background-color:blue;")
+
+    //ID Search
+    /*element.style.background="red"
+    console.log();*/
+    /*const ulTag = document.getElementById("element");
+    ulTag.style.backgroundColor="red"
+    console.log();*/tableTag
+    listItem = document.getElementsByClassName("list-item")
+    console.log(listItem);
+    console.log(document.getElementsByTagName("table"))
+
+    //Query Selector : these are static(once the data gets stored, it will remain same)
+    const listItems = document.querySelectorAll('.list-item')
+    console.log(listItems);
+
+    const listItem=documents.querySelectorAll('ul>li:last-child');
+    console.log(listItem[0].textContent);
+
+    /*const listItem=documents.querySelectorAll('ul>li:nth-child(1)'); //1st child
+    console.log(listItem[0].textContent);*/
+    
+
+    //Attributes
+    console.log(allDivs);
+
+    console.log(element.getAttribute('data'));
+    console.log(element.setAttribute('order-placed', 'pending')); //pending is current state of order placed
+    console.log(element.hasAttribute('order-placed'));  //true
+    console.log(element.removeAttribute('order-placed')) ;
+
+    //Creating and Removing the node elements
+    const newDiv = document.createElement('div');
+    newDiv.textContent = "Hello World";
+    body.append(newDiv);
+    const newText = element.createTextNode('Hello World');
+    //newDiv.appendChild(newText);
+    body.append(newDiv)
+    //body.prepend(newDiv);
+    //body.before(newDiv);
+    body.after(newDiv);
+    firstDiv.replaceWith(newDiv);
+    firstDiv.remove();
+
+    /*newDiv.innerHTML = `<ul id="element" data="valid"> 
+        <li class="list-item">First element</li>
+        <li class="list-item">Second element</li>
+        <li class="list-item">Third element</li>
+    </ul>`
+    body.append(newDiv); */
+
+
+    //Events
+    <button id="clickButton" onclick="alert('Hello World')">Click Me</button>
+    //-> by creating function for alert
+    clickBtn.onclick = function(){
+        alert("Thanks for watching");
+    }
+    //OR
+    clickBtn.addEventListener('click', callMe)
+    clickBtn.removeEventListener('click', callMe);
+
+    function callMe(event){
+        console.log(event.type);
+        console.log(event.currentTarget);
+        console.log(event.clientY);
+        console.log(event.clientX);
+        alert("Thanks for watching");
+        //by clicking on the Click me button from different axis, such as X, Y, we can get a different message
+    }
+    
+</script>
+</body>
+</html>
